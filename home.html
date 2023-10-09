@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="sign-in-button">Hello, sign in <br> 
+      <span class="accounts">Accounts & Lists</span>
+    </button>
+
+    <div class="down-menu" hidden>
+      <div class="triangle-down"></div>
+      <div class="rectangle">
+        <div class="your-list">
+          <p class="list-item-header">Your List</p>
+          <p >Create a list</p>
+          <p class="list-item">Find a list</p>
+        </ul>
+      </div>
+      <div  class="your-account">
+        <p class="list-item-header">Your Account</p>
+        <p>Accounts</p>
+        <p>Orders</p>
+        <p>Recommendatins</p>
+        <p>Browsing History</p>
+       
+      </div>
+      </div>
+    </div>
+  </header>
+</body>
+<script>
+const button = document.querySelector('.sign-in-button');
+const body = document.body;
+
+button.addEventListener('mouseenter', function() {
+  body.style.backgroundColor = 'rgba(32, 29, 30, 0.478)';
+});
+
+button.addEventListener('mouseleave', function() {
+  body.style.backgroundColor = '#c0bcbc';
+});
+
+</script>
+</html>  
