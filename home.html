@@ -4,9 +4,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <button class="sign-in-button">Hello, sign in <br> 
-      <span class="accounts">Accounts & Lists</span>
+
+ 
+    <div class="navbar">
+    <button class="sign-in-button"> Hello, sign in <br> 
+      <b>
+        Accounts & Lists <span class="arrow"> &#129171; </span>
+      </b>
     </button>
 
     <div class="down-menu" hidden>
@@ -28,18 +32,25 @@
       </div>
       </div>
     </div>
-  </header>
+  </div>
+  <div class="main-container"></div>
+<div class="bg"></div>
 </body>
 <script>
 const button = document.querySelector('.sign-in-button');
-const body = document.body;
+const mainContainer = document.querySelector('.main-container');
+const bg = document.querySelector('.bg') 
 
 button.addEventListener('mouseenter', function() {
-  body.style.backgroundColor = 'rgba(32, 29, 30, 0.478)';
+  mainContainer.style.zIndex = '0';
+  bg.style.zIndex='1';
 });
 
 button.addEventListener('mouseleave', function() {
-  body.style.backgroundColor = '#c0bcbc';
+  mainContainer.style.zIndex = '1';
+  bg.style.zIndex='0';
+
+
 });
 
 </script>
